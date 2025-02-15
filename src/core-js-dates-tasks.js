@@ -17,8 +17,11 @@
  * '01 Jan 1970 00:00:00 UTC' => 0
  * '04 Dec 1995 00:12:00 UTC' => 818035920000
  */
-function dateToTimestamp(/* date */) {
-  throw new Error('Not implemented');
+function dateToTimestamp(date) {
+  const controlDate = new Date('01 Jan 1970 00:00:00 UTC');
+  const testDate = new Date(date);
+
+  return testDate - controlDate;
 }
 
 /**
